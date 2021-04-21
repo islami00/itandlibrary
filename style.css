@@ -1,12 +1,70 @@
-body{
-    background: rgba(156, 223, 240, 0.911); 
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma,Verdana, sans-serif;
+
 }
-.nav-button {
-    text-decoration: none;
+body{
+    background: rgba(199, 206, 205, 0.911); 
+
 }
 
+
+/* navigation custom start*/
+
+div.navbar{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    flex-shrink: inherit;
+}
+span.logo{
+    color: azure;
+    align-self: center;
+    margin-left: 1.25vw;
+    font-weight: bold;
+    font-size: larger;
+}
+
+ul.navbar-buttons{
+    display: flex;
+    flex-direction: row;
+}
+.nav-button {
+    font-size: smaller;
+    background-color: #f44336;
+    color: white;
+    padding: 1.25vw;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    display: inline-flex;
+  
+}
+
+
+/* aligning pic and description*/
+
+.outmid{
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    flex:150px;
+}
+.out-mid-left{
+    flex:1;
+}
+.out-mid-right{
+    flex:3;
+    display: flex;
+    flex-flow: column wrap;
+}
 a.mail-button:link{
 
         background-color: #f44336;

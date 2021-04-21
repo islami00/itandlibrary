@@ -1,0 +1,23 @@
+body{
+    background: rgba(156, 223, 240, 0.911); 
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+.nav-button {
+    text-decoration: none;
+}
+
+a.mail-button:link{
+
+        background-color: #f44336;
+        color: white;
+        padding: 0.5rem 0.5rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-flex;
+      
+}
+
+a.mail-button:hover, a.mail-button:active {
+    background-color: black;
+  }

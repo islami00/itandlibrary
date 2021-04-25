@@ -4,14 +4,19 @@
     font-family: 'Segoe UI', Tahoma,Verdana, sans-serif;
 
 }
-body{
+html,body{
     background: rgba(199, 206, 205, 0.911); 
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     width: 100%;
     height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
+body{
+    align-self: center;
+}
 
 /* navigation custom start*/
 
@@ -86,15 +91,20 @@ a.mail-button:hover, a.mail-button:active {
 
   /* my slider start*/
 div.slider{
+    
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
+    position: relative;
 }
   img.slider-content {
     display: none;
   }
 
   img.active-image{
-      display: flex; 
+      display: flex;
+      align-self: center;
+      width: 1000px;
+      height:580px;
       /*it's resizing with slider div which is full length and i want that*/
   }
   
@@ -102,7 +112,7 @@ div.slider{
   div.slider-ctrl-n-txt{
 
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row;
       position: absolute;
   }
   div.slider-left-button{
@@ -143,6 +153,24 @@ div.slider{
   span.slider-button.active-slide{
     background-color: white;
   }
+/*school image*/
+.uni{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+.nile-head{
+    background-color: black;
+    align-self: center;
+    font-size: 30px;
+    font-style: bold;
+    color: white;
+    padding: 0% 40%;
+}    
+
+.myexperience{
+    position: absolute;
+}
 
   /*editing the bottom*/
 
@@ -150,8 +178,11 @@ div.slider{
     display: flex;
     flex-wrap: row wrap;
     background-color: black;
-      width: 100%;
-  }
+    width: 100%;
+    justify-self: end;
+    }
+
+
 
   span .social{
     display: flex;
@@ -160,3 +191,4 @@ div.slider{
     padding: 4px 4px;
     background-color: #f44336;    
 }
+

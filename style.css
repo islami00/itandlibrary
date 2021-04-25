@@ -143,3 +143,20 @@ div.slider{
   span.slider-button.active-slide{
     background-color: white;
   }
+
+  /*editing the bottom*/
+
+  div.end-contacts{
+    display: flex;
+    flex-wrap: row wrap;
+    background-color: black;
+      width: 100%;
+  }
+
+  span .social{
+    display: flex;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 4px 4px;
+    background-color: #f44336;    
+}

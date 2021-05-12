@@ -1,4 +1,4 @@
-var modulo,document,leftButton,rButton,img,toggleActiveImg,currentImg,next,previous,skipTo,buttonSpan,buttonRem;
+var modulo,document,leftButton,rButton,img,toggleActiveImg,currentImg,next,previous,skipTo,buttonSpan,buttonRem,slider,buttons,offButton;
 // for expandability, use js to create slider buttons all to length of image array
 // then replace three with image array length
 // might want to blur out the spans at a point then start moving thru
@@ -7,6 +7,8 @@ leftButton = document.querySelector(".slider-left-button");
 rButton = document.querySelector(".slider-right-button");
 img = document.querySelectorAll(".slider-content");
 buttonSpan = document.querySelectorAll(".slider-button");
+slider = document.querySelector(".slider")
+buttons = [leftButton,rButton]
 
 toggleActiveImg = function (a) {
     a.classList.toggle("active-image");
@@ -59,6 +61,12 @@ skipTo = function(currSelIndex,imgArray) {
         toggleActiveSel(buttonSpan[currSelIndex]);
 };
 
+offButton = function(buttonArray) {
+    for (let i = 0; i < buttons.length; i++) {
+        const thisButton = buttons[i];
+        thisButton.classList.toggle("buttonOff");
+    };
+};
 // add listener for slider control
 for (let i = 0; i < buttonSpan.length; i++) {
     buttonSpan[i].addEventListener("click", e =>{
@@ -81,5 +89,11 @@ rButton.addEventListener("click", e =>{
     toggleActiveSel(buttonSpan[currentImg])
 });
 
-
+slider.addEventListener("mouseover",e => {
+    offButton(buttons);
+});
+slider.addEventListener("mouseout",e => {
+    offButton(buttons);
+});
+// remember to remove "on" for events
 // later style add fade out with onmousein and onmouseout

@@ -78,19 +78,17 @@ div.slider{
       width: 100%;   /*image is in 7:6*/
       height:100%;
       z-index: 0;
-      /*it's resizing with slider div which is full length and i want that*/
+
   }
-  /*use a variable to store the width and height of the image and use hat to scale slider by ratioing it down use transform to do same to image*/
+
   div.slider-left-button{
     position: absolute;
     left: 0;
-    border-top: 6px solid firebrick;
-    border-left: 6px solid firebrick;
+    border-top: 4px solid firebrick;
+    border-left: 4px solid firebrick;
     z-index: 1;
     width: 10%;
     height: 20%;
-    background-color: rgba(0, 3, 3, 0.911);
-  
   }
   div.slider-right-button{
       width: 10%;
@@ -99,10 +97,13 @@ div.slider{
       right: 0; /*right starts from very right of element(0) leftwards*/
       bottom: 0;
       z-index: 1;
-      background-color: rgba(0, 3, 3, 0.911);
-      border-bottom: 6px solid firebrick;
-      border-right: 6px solid firebrick;
+      border-bottom: 4px solid firebrick;
+      border-right: 4px solid firebrick;
     }
+  
+  div.buttonOff{
+    display: none;
+  }
 
   div.slider-text{
     display: flex;
@@ -113,7 +114,6 @@ div.slider{
     display: flex;
     flex-flow: row;
     justify-content: center;
-    
     align-self: center;
   }
 

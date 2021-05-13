@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-
+body{
+  font-size: 16px;
+  line-height: 1.5;
+}
 /* navigation custom start*/
 
 div.navbar{
@@ -21,16 +23,13 @@ span.logo{
     border-radius: 6px;
     height: 100%;
     width: 9%;
+    text-align: center;
     color: azure;
-    padding: 0 0 0 1.25vw;
-    font-size: 22px;
-    background-color: #f44336;
+    margin: 0 0 0 1.25vw;
+    font-size: 2rem;
+    line-height: 2rem;
 }
-.logo p{
-    position: relative;
-    left: 25%;
-    top: 25%;
-}
+
 ul.navbar-buttons{
     height:100%;
     display: flex;
@@ -38,7 +37,8 @@ ul.navbar-buttons{
 }
 .nav-button {
     margin: 0;
-    font-size: smaller;
+    font-size: 1rem;
+    line-height: 1rem; /*sets height of immediate parent of text(add space above and below)*/
     background-color: #f44336;
     color: white;
     padding: 1.25vw;
@@ -58,6 +58,7 @@ div.slider{
     max-width: 210px; /*gotta love max-width*/
     max-height: 360px;
     overflow: hidden;
+    align-self: center;
   }
   img.slider-content {
     display: none;
@@ -106,6 +107,7 @@ div.slider{
     flex-flow: row;
     justify-content: center;
     align-self: center;
+    /*set parent as relative , position elements absolutely*/
   }
 
   span.slider-button{
@@ -128,6 +130,24 @@ header.background{
     background-size: 100% 100%;
     width: 100%;
     height: 100vh;
+}
+
+section.midAlignX{
+  width: 50%;
+  height: calc(100% - (2.5vw + 1rem)); 
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  position: absolute;
+  left: 25%;
+}
+
+section.midAlignY{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 /*school image*/
 /* .uni{

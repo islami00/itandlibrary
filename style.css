@@ -62,15 +62,14 @@ div.slider{
   }
   img.slider-content {
     display: none;
+    width: 100%;   /*image is in 7:6*/
+    height:100%;
   }
 
   img.active-image{
       display: flex;
       align-self: center;
-      width: 100%;   /*image is in 7:6*/
-      height:100%;
       z-index: 0;
-
   }
 
   div.slider-left-button{
@@ -172,7 +171,15 @@ header.background{
   line-height: 0.4;
   transform: scale(-1,-1);
 }
-
+/*animations*/
+@keyframes slide-left{
+  from{transform: translate(0,0);}
+  to{transform: translate(100%,0);}
+}
+@keyframes slide-right{
+  from{transform: translate(0,0);}
+  to{transform: translate(-100%,0);}
+}
 /*school image*/
 /* .uni{
     position: relative;

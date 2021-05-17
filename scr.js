@@ -112,14 +112,20 @@ skipTo = function(currSelIndex,imgArray) {
 };
 
 offButton = function(buttonArray) {
-    for (let i = 0; i < buttons.length; i++) {
-        const thisButton = buttons[i];
+    for (let i = 0; i < buttonArray.length; i++) {
+        const thisButton = buttonArray[i];
         thisButton.classList.toggle("buttonOff");
     };
 };
 // add listener for slider control
 for (let i = 0; i < buttonSpan.length; i++) {
     buttonSpan[i].addEventListener("click", e =>{
+        // remove previous to avoid issue , r and l can start from wherever
+        previousRem(img);
+        // remove animations
+        setPreviousAnimation("");
+        setActiveAnimation("");
+        // skip to image
         skipTo(i,img);
     });
 };

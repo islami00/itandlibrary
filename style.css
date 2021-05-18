@@ -55,8 +55,8 @@ div.slider{
     display: flex;
     flex-flow: row;
     position: relative;
-    max-width: 210px; /*gotta love max-width*/
-    max-height: 360px;
+    max-width: 80%; /*gotta love max-width*/
+    max-height: 70%; /*NOTE: USE MEDIA QUERIES FOR THIS*/
     overflow: hidden;
     align-self: center;
   }
@@ -112,13 +112,16 @@ div.slider-text{
   margin-top: 3%;
 }
 div.slider-skip-buttons{
-  width: 12%;
+  width: 12.5%;
   display: flex;
   flex-flow: row;
-  justify-content: center;
-  align-self: center;
   position: absolute;
-  top: 95%;
+  z-index: 2;
+  justify-content: center;
+  align-self: flex-end;
+  left: 41.25%; /*USE MEDIA QUERIES HERE TOO TO SCALE WITH SLIDER*/
+  margin-bottom: 2.5px;
+  
     /*set parent as relative , position elements absolutely*/
   }
 
@@ -127,6 +130,7 @@ div.slider-skip-buttons{
     margin: auto;
     border: 5px solid black;
     border-radius: 12px;
+    transition: background-color 0.65s;
   /*magic number here later, padding in x and y is linear, independent of border width*/
   }
   span.slider-button.active-button{
@@ -145,13 +149,13 @@ header.background{
 }
 
   section.midAlignX{
-    width: 50%;
+    width: 60%;
     height: calc(100% - (2.5vw + 1rem)); 
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    justify-content: center;
     position: absolute;
-    left: 25%;
+    left: 20%;
   }
 
   section.midAlignY{
@@ -159,7 +163,7 @@ header.background{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    max-height: 100%;
   }
 
 /*quote tags*/

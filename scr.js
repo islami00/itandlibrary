@@ -12,8 +12,6 @@ buttons = [leftButton,rButton]
 previousImage = document.querySelector(".previous-image")
 sheets = document.styleSheets
 
-// return css rule object from desired stylesheet 
-
 returnStyleSheet = function(styleName){
     for(let i = 0; i < sheets.length; i++){
         if (String(sheets[i].href).includes(styleName)){
@@ -134,8 +132,8 @@ leftButton.addEventListener("click", e =>{
     //remove previous
     previousRem(img)
     // add animations to style
-    setPreviousAnimation("animate-prev-previous 1.3s ease-in-out")
-    setActiveAnimation("animate-active-previous 1.3s ease-in-out")
+    setPreviousAnimation("animate-prev-previous 1.5s ease-in-out")
+    setActiveAnimation("animate-active-previous 1.5s ease-in-out")
     //switch slides
     previous(img);
     // button remove
@@ -147,8 +145,8 @@ rButton.addEventListener("click", e =>{
     //remove previous
     previousRem(img)
     //add animations
-    setPreviousAnimation("animate-prev-next 1.3s ease-in-out")
-    setActiveAnimation("animate-active-next 1.3s ease-in-out")
+    setPreviousAnimation("animate-prev-next 1.5s ease-in-out")
+    setActiveAnimation("animate-active-next 1.5s ease-in-out")
     // switch slides
     next(img);
     // button remove

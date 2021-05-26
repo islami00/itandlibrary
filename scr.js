@@ -163,3 +163,10 @@ slider.addEventListener("mouseout",e => {
 });
 // remember to remove "on" for event names
 // later style add fade out with onmousein and onmouseout
+
+
+// call click on right button every time interval
+// note: setinterval doesn't work on methods, rather actual functions , thus enveloping it in an anonymous function
+setInterval(() => {
+    rButton.click();
+}, 10000);
